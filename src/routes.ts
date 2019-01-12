@@ -1,3 +1,4 @@
+// all routes configurations
 const routes = {
   ROOT: '/',
   SIGNUP: '/signup',

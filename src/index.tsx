@@ -14,20 +14,21 @@ import 'styles/main.scss';
 import Root from 'views';
 
 import history from 'utils/history';
-
+// PWA
 import registerServiceWorker from './registerServiceWorker';
-
+// configuration redux store
 const composeEnhancers = composeWithDevTools(applyMiddleware(thunk, logger));
 const store = createStore(reducers,
 {
 },
 composeEnhancers);
 
+// import views(container) componensts
 import routes from './routes';
 import HomeView from 'views/home';
 import Signin from 'views/auth/Signin';
 import Signout from 'views/auth/Signout';
-
+// import components(stateless) components
 import Signup from 'components/Signup';
 import Profile from 'components/Profile';
 
@@ -35,6 +36,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Root>
+        {/* pass the components as children */}
         <Route path={routes.ROOT} exact component={HomeView}/>
         <Route path={routes.SIGNIN} component={Signin}/>
         <Route path={routes.PROFILE} component={Profile}/>
