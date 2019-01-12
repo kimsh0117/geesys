@@ -25,9 +25,10 @@ composeEnhancers);
 
 import routes from './routes';
 import HomeView from 'views/home';
-import Signin from 'root/views/auth/Shignin';
+import Signin from 'views/auth/Signin';
 import Signout from 'views/auth/Signout';
 
+import Signup from 'components/Signup';
 import Profile from 'components/Profile';
 
 ReactDOM.render(
@@ -38,6 +39,7 @@ ReactDOM.render(
         <Route path={routes.SIGNIN} component={Signin}/>
         <Route path={routes.PROFILE} component={Profile}/>
         <Route path={routes.SIGNOUT} component={Signout}/>
+        <Route path={routes.SIGNUP} component={Signup}/>
       </Root>
     </Router>
   </Provider>,

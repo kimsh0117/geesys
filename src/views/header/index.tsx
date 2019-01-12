@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import routes from '../../routes';
 
-class Header extends React.Component<any, any> {
+class Header extends React.Component<any> {
   renderLinks() {
     if (this.props.authenticated) {
       return (
