@@ -1,13 +1,20 @@
 import { AUTH_USER, AUTH_USER_ERROR } from '../actions';
+import { AuthModel } from 'models/Auth';
 
+// set type state's
 export interface AuthState {
-  authenticated: string,
+  authenticated: AuthModel,
   errorMessage?: string,
 }
-
+// set dafault state
 export function defaultAuthState() {
   return {
-    authenticated: 'default',
+    authenticated: {
+      accessToken: '',
+      tokenId: 0,
+      userId: 0,
+      messages: []
+    },
   };
 }
 

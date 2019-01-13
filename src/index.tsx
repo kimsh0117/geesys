@@ -18,10 +18,10 @@ import history from 'utils/history';
 import registerServiceWorker from './registerServiceWorker';
 // configuration redux store
 const composeEnhancers = composeWithDevTools(applyMiddleware(thunk, logger));
-const store = createStore(reducers,
-{
-},
-composeEnhancers);
+// store
+// first parameter all reducer
+// second parameter defaulte reducers
+const store = createStore(reducers, {}, composeEnhancers);
 
 // import views(container) componensts
 import routes from './routes';
@@ -37,6 +37,7 @@ ReactDOM.render(
     <Router history={history}>
       <Root>
         {/* pass the components as children */}
+        {/* have to refactoring chileren components as array */}
         <Route path={routes.ROOT} exact component={HomeView}/>
         <Route path={routes.SIGNIN} component={Signin}/>
         <Route path={routes.PROFILE} component={Profile}/>

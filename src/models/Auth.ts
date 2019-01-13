@@ -1,10 +1,12 @@
-// interface Messages {
-//   template: string
-// }
+// configuration data type model when success auth api
 
-export default interface AuthModel {
-  // accessToken: string
-  // tokenId: number
-  // userId: number
-  // messages: Messages[]
+interface Messages {
+  template: string
+}
+
+export interface AuthModel {
+  accessToken: string
+  tokenId: number
+  userId: number
+  messages: Messages[]
 }

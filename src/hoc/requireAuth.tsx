@@ -1,3 +1,7 @@
+// HOC for checking auth
+// if not have token render home component
+// if have token render profile component
+
 import * as React from 'react';
 import { connect } from 'react-redux';
 

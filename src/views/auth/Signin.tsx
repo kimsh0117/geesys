@@ -33,7 +33,7 @@ class Signin extends React.Component<InjectedFormProps<any> & any> {
           />
         </fieldset>
         <div>{this.props.errorMessage}</div>
-        <button>Sign Up</button>
+        <button>Sign In</button>
       </form>
     );
   }
